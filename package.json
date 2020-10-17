@@ -11,14 +11,20 @@
   "author": "Lam Kim Phu",
   "license": "ISC",
   "dependencies": {
+    "app-root-path": "^3.0.0",
     "bcrypt": "^5.0.0",
     "config": "^3.3.2",
     "express": "^4.17.1",
+    "express-async-error": "0.0.2",
     "joi": "^17.2.1",
     "joi-objectid": "^3.0.1",
     "joi-password-complexity": "^4.2.1",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
-    "mongoose": "^5.10.9"
+    "mongoose": "^5.10.9",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "winston": "^3.3.3"
   }
 }
