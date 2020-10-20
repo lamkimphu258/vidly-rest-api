@@ -4,6 +4,7 @@ const customers = require("../routes/customers");
 const movies = require("../routes/movies");
 const rentals = require("../routes/rentals");
 const users = require("../routes/users");
+const returns = require("../routes/returns");
 const authentication = require("../routes/auth");
 const {
   logErrors,
@@ -20,6 +21,7 @@ module.exports = (app) => {
   app.use("/api/rentals", rentals);
   app.use("/api/users", users);
   app.use("/api/authentication", authentication);
+  app.use("/api/returns", returns);
 
   app.use(logErrors);
   app.use(clientErrorHandler);

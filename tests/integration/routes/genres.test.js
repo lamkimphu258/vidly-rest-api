@@ -11,7 +11,7 @@ describe("/api/genres", () => {
 
   afterEach(async () => {
     await Genre.collection.deleteMany({});
-    server.close();
+    await server.close();
   });
 
   describe("GET /", () => {
@@ -152,7 +152,6 @@ describe("/api/genres", () => {
     });
 
     it("should return deleted genre", async () => {
-      console.log("genre id:", genre._id);
       const res = await exec();
       expect(res.status).toBe(200);
     });

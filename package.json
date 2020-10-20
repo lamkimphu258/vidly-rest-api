@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "NODE_ENV=development nodemon index.js",
-    "test": "jest --testEnvironment=node --verbose --watchAll --coverage --maxWorkers=1"
+    "test": "jest --testEnvironment=node --verbose --watchAll --coverage"
   },
   "keywords": [],
   "author": "Lam Kim Phu",
@@ -21,6 +21,7 @@
     "joi-password-complexity": "^4.2.1",
     "jsonwebtoken": "^8.5.1",
     "lodash": "^4.17.20",
+    "moment": "^2.29.1",
     "mongoose": "^5.10.9",
     "morgan": "^1.10.0"
   },
