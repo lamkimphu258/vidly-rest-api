@@ -11,9 +11,16 @@ const {
   clientErrorHandler,
   errorHandler,
 } = require("../middleware/error");
+const cors = require("cors");
+const corsOptions = {
+  origin: "http://localhost:3000",
+  optionSuccessStatus: 200,
+};
 
 module.exports = (app) => {
   app.use(express.json());
+
+  app.use(cors(corsOptions));
 
   app.use("/api/genres", genres);
   app.use("/api/customers", customers);

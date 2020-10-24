@@ -31,4 +31,11 @@ router.get("/", async (req, res) => {
   res.send(movies);
 });
 
+router.get("/:id", async (req, res) => {
+  const movie = await Movie.findById(req.params.id);
+  if (!movie) return res.status(404).send("Movie with given ID not found.");
+
+  res.send(movie);
+});
+
 module.exports = router;
